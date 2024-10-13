@@ -144,10 +144,10 @@ def abrir_cuadro_relacion(ventana_menu_expe):
     tabla.heading("Peso", text="Peso")
 
     # Ajustar el ancho de las columnas
-    tabla.column("Síntoma", width=300)  # Ajustar ancho y centrar
+    tabla.column("Síntoma", width=500)  # Ajustar ancho y centrar
     tabla.column("Peso", width=100, anchor="center")  # Ajustar ancho y centrar
 
-    tabla.place(x=250, y=400, width=400, height=200)
+    tabla.place(x=250, y=400, width=600, height=200)
 
 
 
