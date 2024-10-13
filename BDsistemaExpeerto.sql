@@ -115,6 +115,63 @@ INSERT INTO sintomas (sintoma, imagen_path) VALUES
 ('Problemas de concentración', 'C:/Users/Alfre/SistemaEnfermedades/sintomas/problemas_concentracion.jpg'),
 ('Manos y pies fríos', 'C:/Users/Alfre/SistemaEnfermedades/sintomas/Manos y pies fríos.jpg');
 
+#Nuevos sintomas 50
+
+INSERT INTO sintomas (sintoma, imagen_path) VALUES
+('Rigidez matutina en las articulaciones', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Nódulos subcutáneos', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Deformidad de las articulaciones', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Pérdida de rango de movimiento', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Sensación de calor en las articulaciones', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Intolerancia al frío', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Estreñimiento', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Depresión', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Caída del cabello', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Piel seca y escamosa', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Dolor abdominal recurrente', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Diarrea crónica', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Fístulas perianales', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Úlceras bucales', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Retraso en el crecimiento (en niños)', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Erupción en forma de mariposa en la cara', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Fotosensibilidad', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Úlceras orales o nasales', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Artritis no erosiva', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Serositis (inflamación de las membranas serosas)', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Temblor en reposo', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Rigidez muscular', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Bradicinesia (movimientos lentos)', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Inestabilidad postural', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Alteraciones en la escritura (micrografía)', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Puntos sensibles específicos en el cuerpo', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Trastornos del sueño', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Problemas de memoria y concentración', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Síndrome del intestino irritable', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Sensibilidad a temperaturas extremas', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Entumecimiento o debilidad en las extremidades', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Problemas de equilibrio y coordinación', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Problemas de control de la vejiga', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Neuritis óptica (visión borrosa o doble)', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Espasticidad muscular', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Distensión abdominal', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Esteatorrea (heces grasosas)', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Anemia ferropénica', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Dermatitis herpetiforme', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Retraso en el desarrollo (en niños)', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Dolor intenso en las articulaciones, especialmente en el dedo gordo del pie', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Enrojecimiento e inflamación', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Formación de tofos', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Limitación del movimiento', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Descamación de la piel', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Sequedad ocular', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Sequedad bucal', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Caries dental frecuente', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Inflamación de las glándulas salivales', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png'),
+('Sequedad vaginal', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png');
+
+INSERT INTO sintomas (sintoma, imagen_path) VALUES
+('Dificultad para hablar', 'C:/Users/Alfre/SistemaEnfermedades/enfermedades/nohayimagen.png');
+
 #crear tabla cuadro-relacion, ON DELETE CASCADE PARA ELIMINAR DESDE SINTOMAS O ENFERMEDAD
 CREATE TABLE cuadro_relacion (
     id_cuadro_relacion INT PRIMARY KEY AUTO_INCREMENT,
