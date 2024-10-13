@@ -345,13 +345,13 @@ def abrir_cuadro_relacion(ventana_menu_expe):
 
     #Bton Guardar
     boton_guardar = ttk.Button(ventana_cuadro_relacion, text="Guardar",command=guardar_caracteristicas, style='CustomButton.TButton')
-    boton_guardar.place(x=450, y=620, width=100, height=30)
+    boton_guardar.place(x=360, y=620, width=100, height=30)
 
     boton_cancelar = ttk.Button(ventana_cuadro_relacion, text="Cancelar", command=cancelar_cambios, style='CustomButton.TButton')
-    boton_cancelar.place(x=560, y=620, width=100, height=30)
+    boton_cancelar.place(x=470, y=620, width=100, height=30)
 
     boton_borrar = ttk.Button(ventana_cuadro_relacion, text="Borrar", command=borrar_relaciones, style='CustomButton.TButton')
-    boton_borrar.place(x=670, y=620, width=100, height=30)
+    boton_borrar.place(x=580, y=620, width=100, height=30)
 
     #combo_enfermedad.bind("<<ComboboxSelected>>", lambda event: mostrar_imagen(combo_enfermedad.get(), imagen_label))
 
