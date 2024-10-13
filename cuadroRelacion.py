@@ -179,7 +179,7 @@ def abrir_cuadro_relacion(ventana_menu_expe):
     style = ttk.Style()
     style.configure('CustomButton.TButton', 
         font=('Arial', 12),
-        background='black',
+        background='white',
         foreground='black',
         padding=5
     )
