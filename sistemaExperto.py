@@ -1538,6 +1538,9 @@ def mostrar_menu_experto():
     imagen_label.place(x=550, y=555)  # Ajustar la posición debajo de los botones
     # Función para validar la contraseña
 
+# Importar el nuevo módulo al inicio del archivo
+from interfazUsuario import interfaz_usuario
+
 def interfaces():
     ventana_interfaces = tk.Toplevel(root)
     ventana_interfaces.title("Entrar")
@@ -1559,12 +1562,16 @@ def interfaces():
             mostrar_menu_experto()  # Llama a la función que abre el menú experto
         else:
             messagebox.showerror("Contraseña incorrecta", "La contraseña ingresada es incorrecta, vuelve a intentarlo")
+
+    def abrir_interfaz_usuario():
+        ventana_interfaces.withdraw()  # Oculta la ventana actual
+        interfaz_usuario(ventana_interfaces)  # Pasa la referencia de la ventana actual
             
 
     experto = tk.Button( ventana_interfaces, text="Experto   ", command=pedir_contraseña, font=("Georgia", 24, "bold"), bg="#6A70FE", width=15)
     experto.place(x=620, y=350)
 
-    usuario = tk.Button(ventana_interfaces, text="Usuario   ", command= " ",font=("Georgia", 24, "bold"),bg="#BFBF00", width=15)
+    usuario = tk.Button(ventana_interfaces, text="Usuario   ", command=abrir_interfaz_usuario, font=("Georgia", 24, "bold"), bg="#BFBF00", width=15)
     usuario.place(x=620,y=450)
 
     btn_regresar = tk.Button(ventana_interfaces,text="Regresar", command=ventana_interfaces.destroy,font=("Georgia", 24, "bold"),bg="lightcoral",width=15)  # Elimina el bordeborderwidth=0,  # Elimina el ancho del borde
