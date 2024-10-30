@@ -55,9 +55,11 @@ def interfaz_usuario(ventana_anterior):
     )
     btn_regresar.pack(side=tk.BOTTOM, pady=50)
     
-    # Funciones de los botones
+    from busquedaSintoma import abrir_busqueda_sintomas
+
     def busqueda_sintomas():
-        messagebox.showinfo("Búsqueda por síntomas", "Función en desarrollo")
+        ventana_usuario.withdraw()  # Oculta la ventana actual
+        abrir_busqueda_sintomas(ventana_usuario)
         
     def busqueda_enfermedad():
         messagebox.showinfo("Búsqueda por enfermedad", "Función en desarrollo")
