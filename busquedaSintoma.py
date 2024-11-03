@@ -27,14 +27,14 @@ def abrir_busqueda_sintomas(ventana_anterior):
     ventana_sintomas = tk.Toplevel()
     ventana_sintomas.title("Búsqueda por Síntomas")
     ventana_sintomas.attributes("-fullscreen", True)
-    ventana_sintomas.configure(bg="#00BFBF")
+    ventana_sintomas.configure(bg="#6FB0B5")
 
     # Título
     titulo_label = tk.Label(ventana_sintomas, 
                           text="BÚSQUEDA POR SÍNTOMAS", 
                           font=("Trebuchet MS", 50, "bold"), 
-                          bg="#00BFBF")
-    titulo_label.place(x=530, y=40)
+                          bg="#6FB0B5")
+    titulo_label.place(x=515, y=40)
 
     # ComboBox para síntomas
     fuente = tkFont.Font(family="Trebuchet MS", size=15)
@@ -42,7 +42,7 @@ def abrir_busqueda_sintomas(ventana_anterior):
     style.configure("TCombobox", font=fuente)
 
     # Etiqueta para síntomas
-    label_sintomas = tk.Label(ventana_sintomas, text="Síntomas", font=("Trebuchet MS", 18))
+    label_sintomas = tk.Label(ventana_sintomas, text="Síntomas", font=("Trebuchet MS", 18), background="#6FB0B5")
     label_sintomas.place(x=250, y=210)  # Posición de la etiqueta
 
     # ComboBox para síntomas
@@ -66,7 +66,7 @@ def abrir_busqueda_sintomas(ventana_anterior):
                    background="lightblue", 
                    foreground="black")
 
-    frame_tabla = tk.Frame(ventana_sintomas, bg="#00BFBF")
+    frame_tabla = tk.Frame(ventana_sintomas, bg="#6FB0B5")
     frame_tabla.place(x=250, y=350)
 
     tabla = ttk.Treeview(frame_tabla, 
@@ -153,15 +153,24 @@ def abrir_busqueda_sintomas(ventana_anterior):
                             command=eliminar_sintoma,
                             bg="#6A70FE",
                             **estilo_boton)
-    btn_eliminar.place(x=800, y=450)
+    btn_eliminar.place(x=500, y=650)
+
+    btn_inferir = tk.Button(ventana_sintomas, 
+                            text="Inferir", 
+                            command="",
+                            bg="yellow3",
+                            **estilo_boton)
+    btn_inferir.place(x=240, y=650)
+
+
 
     btn_volver = tk.Button(ventana_sintomas, 
-                          text="Volver", 
+                          text="Regresar", 
                           command=lambda: volver_a_anterior(ventana_sintomas, 
                                                           ventana_anterior),
-                          bg="lightcoral",
+                          bg="#FF6B6B",
                           **estilo_boton)
-    btn_volver.place(x=800, y=590)
+    btn_volver.place(x=1000, y=650)
 
     # Vincular eventos
     combo_sintomas.bind('<<ComboboxSelected>>', on_sintoma_seleccionado)
