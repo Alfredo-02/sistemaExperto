@@ -973,7 +973,7 @@ def agregar_sintomas():
     Modificar_button.place(x=950, y=650)
 
     # Botón para salir de la aplicación
-    btn_regresar = tk.Button(ventana_sintoma, text="Salir", command=ventana_sintoma.destroy, font=("Georgia", 24, "bold"), bg="lightcoral", width=10)
+    btn_regresar = tk.Button(ventana_sintoma, text="Salir", command=ventana_sintoma.destroy, font=("Georgia", 24, "bold"), bg="#FF6B6B", width=10)
     btn_regresar.place(x=1210, y=650)
 
 
@@ -1574,7 +1574,7 @@ def interfaces():
     usuario = tk.Button(ventana_interfaces, text="Usuario   ", command=abrir_interfaz_usuario, font=("Georgia", 24, "bold"), bg="#BFBF00", width=15)
     usuario.place(x=620,y=450)
 
-    btn_regresar = tk.Button(ventana_interfaces,text="Regresar", command=ventana_interfaces.destroy,font=("Georgia", 24, "bold"),bg="lightcoral",width=15)  # Elimina el bordeborderwidth=0,  # Elimina el ancho del borde
+    btn_regresar = tk.Button(ventana_interfaces,text="Regresar", command=ventana_interfaces.destroy,font=("Georgia", 24, "bold"),bg="#FF6B6B",width=15)  # Elimina el bordeborderwidth=0,  # Elimina el ancho del borde
     btn_regresar.place(x=1100, y=700)
 
     # Cargar y mostrar la imagen debajo de los botones
@@ -1655,7 +1655,7 @@ if __name__ == "__main__":
     btn_entrar = tk.Button(root, text="Entrar    ", command=interfaces, font=("Comic Sans MS", 19, "bold"), bg="lime green", image=logo_entrar, compound="left")
     btn_entrar.place(x=1300, y=700)
 
-    btn_salir = tk.Button(root, text="Salir     ", command=salir, font=("Comic Sans MS", 19, "bold"), bg="lightcoral", image=logo_salir, compound="left")
+    btn_salir = tk.Button(root, text="Salir     ", command=salir, font=("Comic Sans MS", 19, "bold"), bg="#FF6B6B", image=logo_salir, compound="left")
     btn_salir.place(x=100, y=750)
 
     root.mainloop()
