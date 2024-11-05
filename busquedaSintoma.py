@@ -140,6 +140,9 @@ def abrir_busqueda_sintomas(ventana_anterior):
         seleccion = tabla.selection()
         if seleccion:
             tabla.delete(seleccion)
+            # Quitar la imagen mostrada en imagen_label
+            imagen_label.config(image='')  # Borra la imagen
+            imagen_label.image = None  
         else:
             messagebox.showwarning("Advertencia", 
                                  "Por favor, seleccione un síntoma para eliminar", 
