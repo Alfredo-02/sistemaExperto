@@ -27,7 +27,7 @@ def conectar_db():
         conexion = mysql.connector.connect(
             host="localhost",  # Cambia esto si es necesario
             user="root",  # Reemplaza con tu usuario
-            password="123456",  # Reemplaza con tu contraseña
+            password="Admin08.",  # Reemplaza con tu contraseña
             database="SistemaExperto"  # Reemplaza con tu base de datos
         )
         return conexion
