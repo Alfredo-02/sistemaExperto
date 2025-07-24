@@ -27,8 +27,8 @@ def conectar_db():
         conexion = mysql.connector.connect(
             host="localhost",  # Cambia esto si es necesario
             user="root",  # Reemplaza con tu usuario
-            password="Admin08.",  # Reemplaza con tu contraseña
-            database="SistemaExperto"  # Reemplaza con tu base de datos
+            password="",  # Reemplaza con tu contraseña
+            database=""  # Reemplaza con tu base de datos
         )
         return conexion
     except mysql.connector.Error as e:
@@ -70,47 +70,47 @@ def mostrar_contenido_futuro():
     etiqueta1.place(x=15, y=200)
     
     # Crear un label para el texto
-    label_texto = Label(ventana_futuro, text='Graduarme', font=('Arial', 18,"bold"))  # Reemplaza 'Tu texto aquí' con tu texto
-    label_texto.place(x=100, y=410)  # Asegúrate de que el texto esté debajo de la imagen
+    label_texto = Label(ventana_futuro, text='Graduarme', font=('Arial', 18,"bold"))  
+    label_texto.place(x=100, y=410)  
     
     etiqueta2 = tk.Label(ventana_futuro)
     etiqueta2.place(x=415, y=200)
     
-    label_texto = Label(ventana_futuro, text='Tener empleo', font=('Arial', 18,"bold"))  # Reemplaza 'Tu texto aquí' con tu texto
-    label_texto.place(x=500, y=410)  # Asegúrate de que el texto esté debajo de la imagen
+    label_texto = Label(ventana_futuro, text='Tener empleo', font=('Arial', 18,"bold"))  
+    label_texto.place(x=500, y=410)  
     
     etiqueta3 = tk.Label(ventana_futuro)
     etiqueta3.place(x=815, y=200)
     
-    label_texto = Label(ventana_futuro, text='Construir casa', font=('Arial', 18,"bold"))  # Reemplaza 'Tu texto aquí' con tu texto
-    label_texto.place(x=900, y=410)  # Asegúrate de que el texto esté debajo de la imagen
+    label_texto = Label(ventana_futuro, text='Construir casa', font=('Arial', 18,"bold")) 
+    label_texto.place(x=900, y=410) 
     
     etiqueta4 = tk.Label(ventana_futuro)
     etiqueta4.place(x=1215, y=200)
     
-    label_texto = Label(ventana_futuro, text='Negocio', font=('Arial', 18,"bold"))  # Reemplaza 'Tu texto aquí' con tu texto
-    label_texto.place(x=1300, y=410)  # Asegúrate de que el texto esté debajo de la imagen
+    label_texto = Label(ventana_futuro, text='Negocio', font=('Arial', 18,"bold"))  
+    label_texto.place(x=1300, y=410) 
     
     etiqueta5 = tk.Label(ventana_futuro)
     etiqueta5.place(x=215, y=500)
     
-    label_texto = Label(ventana_futuro, text='Tener carro', font=('Arial', 18,"bold"))  # Reemplaza 'Tu texto aquí' con tu texto
-    label_texto.place(x=300, y=710)  # Asegúrate de que el texto esté debajo de la imagen
+    label_texto = Label(ventana_futuro, text='Tener carro', font=('Arial', 18,"bold"))  
+    label_texto.place(x=300, y=710) 
     
     etiqueta6 = tk.Label(ventana_futuro)
     etiqueta6.place(x=615, y=500)
     
-    label_texto = Label(ventana_futuro, text='Tener familia', font=('Arial', 18, "bold"))  # Reemplaza 'Tu texto aquí' con tu texto
-    label_texto.place(x=700, y=710)  # Asegúrate de que el texto esté debajo de la imagen
+    label_texto = Label(ventana_futuro, text='Tener familia', font=('Arial', 18, "bold"))  
+    label_texto.place(x=700, y=710) 
     
     etiqueta7 = tk.Label(ventana_futuro)
     etiqueta7.place(x=1015, y=500)
     
-    label_texto = Label(ventana_futuro, text='Estar de vacaciones', font=('Arial', 18,"bold"))  # Reemplaza 'Tu texto aquí' con tu texto
-    label_texto.place(x=1050, y=710)  # Asegúrate de que el texto esté debajo de la imagen
+    label_texto = Label(ventana_futuro, text='Estar de vacaciones', font=('Arial', 18,"bold")) 
+    label_texto.place(x=1050, y=710) 
 
     # Funciones para actualizar los frames de los GIFs
-            
+         
     def actualizar1(indice):
         frame = frames1[indice]
         indice = (indice + 1) % len(frames1)
@@ -156,7 +156,7 @@ def mostrar_contenido_futuro():
     # Comienza la animación de los GIFs
     ventana_futuro.after(0, actualizar1, 0)
     ventana_futuro.after(0, actualizar2, 0)
-    ventana_futuro.after(0, actualizar3, 0)  # Comienza la animación del segundo GIF
+    ventana_futuro.after(0, actualizar3, 0)  
     ventana_futuro.after(0, actualizar4, 0)
     ventana_futuro.after(0, actualizar5, 0)
     ventana_futuro.after(0, actualizar6, 0)
@@ -189,38 +189,36 @@ def mostrar_contenido_hobbies():
     etiqueta2 = tk.Label(ventana_hobbies)
     etiqueta2.place(x=415, y=200)
      
-    label_texto = Label(ventana_hobbies, text='Conciertos', font=('Arial', 18,"bold"))  # Reemplaza 'Tu texto aquí' con tu texto
-    label_texto.place(x=530, y=410)  # Asegúrate de que el texto esté debajo de la imagen
+    label_texto = Label(ventana_hobbies, text='Conciertos', font=('Arial', 18,"bold"))  
+    label_texto.place(x=530, y=410)  
      
     etiqueta3 = tk.Label(ventana_hobbies)
     etiqueta3.place(x=815, y=200)
      
-    label_texto = Label(ventana_hobbies, text='Jugar videojuegos', font=('Arial', 18,"bold"))  # Reemplaza 'Tu texto aquí' con tu texto
-    label_texto.place(x=900, y=410)  # Asegúrate de que el texto esté debajo de la imagen
+    label_texto = Label(ventana_hobbies, text='Jugar videojuegos', font=('Arial', 18,"bold")) 
+    label_texto.place(x=900, y=410) 
      
     etiqueta4 = tk.Label(ventana_hobbies)
     etiqueta4.place(x=1215, y=200)
-     
-    #label_texto = Label(ventana_hobbies, text='Programar', font=('Arial', 14))  # Reemplaza 'Tu texto aquí' con tu texto
-    #label_texto.place(x=1300, y=410)  # Asegúrate de que el texto esté debajo de la imagen
+
      
     etiqueta5 = tk.Label(ventana_hobbies)
     etiqueta5.place(x=215, y=500)
      
-    label_texto = Label(ventana_hobbies, text='Manejar moto', font=('Arial', 18,"bold"))  # Reemplaza 'Tu texto aquí' con tu texto
-    label_texto.place(x=300, y=710)  # Asegúrate de que el texto esté debajo de la imagen
+    label_texto = Label(ventana_hobbies, text='Manejar moto', font=('Arial', 18,"bold")) 
+    label_texto.place(x=300, y=710)  
      
     etiqueta6 = tk.Label(ventana_hobbies)
     etiqueta6.place(x=615, y=500)
      
-    label_texto = Label(ventana_hobbies, text='Peliculas', font=('Arial', 18,"bold"))  # Reemplaza 'Tu texto aquí' con tu texto
-    label_texto.place(x=730, y=710)  # Asegúrate de que el texto esté debajo de la imagen
+    label_texto = Label(ventana_hobbies, text='Peliculas', font=('Arial', 18,"bold")) 
+    label_texto.place(x=730, y=710)  
      
     etiqueta7 = tk.Label(ventana_hobbies)
     etiqueta7.place(x=1015, y=500)
      
-    label_texto = Label(ventana_hobbies, text='Programar', font=('Arial', 18,"bold"))  # Reemplaza 'Tu texto aquí' con tu texto
-    label_texto.place(x=1130, y=710)  # Asegúrate de que el texto esté debajo de la imagen
+    label_texto = Label(ventana_hobbies, text='Programar', font=('Arial', 18,"bold"))  
+    label_texto.place(x=1130, y=710) 
 
     def actualizar2(indice):
        frame = frames2[indice]
@@ -268,7 +266,6 @@ def mostrar_contenido_actualmente():
     ventana_actualmente.configure(bg="#6A70FE")
 
     # Título centrado
-    # Título
     titulo_label = tk.Label(ventana_actualmente, text="YO ACTUALMENTE", font=("Comic Sans MS", 32, "bold"), fg="black", bd=15)
     titulo_label.place(x=640,y=40)
     
@@ -284,32 +281,32 @@ def mostrar_contenido_actualmente():
     etiqueta1.place(x=15, y=200)
     
     # Crear un label para el texto
-    label_texto = Label(ventana_actualmente, text='Resido en Zacatepec\n mientras estudio', font=('Arial', 18, "bold"))  # Reemplaza 'Tu texto aquí' con tu texto
-    label_texto.place(x=50, y=520)  # Asegúrate de que el texto esté debajo de la imagen
+    label_texto = Label(ventana_actualmente, text='Resido en Zacatepec\n mientras estudio', font=('Arial', 18, "bold"))
+    label_texto.place(x=50, y=520) 
     
     etiqueta2 = tk.Label(ventana_actualmente)
     etiqueta2.place(x=415, y=200)
     
-    label_texto = Label(ventana_actualmente, text='Estudio en el ITZ', font=('Arial', 18,"bold"))  # Reemplaza 'Tu texto aquí' con tu texto
-    label_texto.place(x=500, y=520)  # Asegúrate de que el texto esté debajo de la imagen
+    label_texto = Label(ventana_actualmente, text='Estudio en el ITZ', font=('Arial', 18,"bold")) 
+    label_texto.place(x=500, y=520) 
     
     etiqueta3 = tk.Label(ventana_actualmente)
     etiqueta3.place(x=815, y=200)
     
-    label_texto = Label(ventana_actualmente, text='Hago tareas', font=('Arial', 18,"bold"))  # Reemplaza 'Tu texto aquí' con tu texto
+    label_texto = Label(ventana_actualmente, text='Hago tareas', font=('Arial', 18,"bold"))  
     label_texto.place(x=900, y=520)  
     
     etiqueta4 = tk.Label(ventana_actualmente)
     etiqueta4.place(x=1215, y=200)
     
-    label_texto = Label(ventana_actualmente, text='Haciendo proyecto\n de software', font=('Arial', 18,"bold"))  # Reemplaza 'Tu texto aquí' con tu texto
-    label_texto.place(x=1240, y=520)  # Asegúrate de que el texto esté debajo de la imagen
+    label_texto = Label(ventana_actualmente, text='Haciendo proyecto\n de software', font=('Arial', 18,"bold")) 
+    label_texto.place(x=1240, y=520)  
    
     etiqueta5 = tk.Label(ventana_actualmente)
     etiqueta5.place(x=415, y=580)
 
-    label_texto = Label(ventana_actualmente, text='Curso ingles', font=('Arial', 18,"bold"))  # Reemplaza 'Tu texto aquí' con tu texto
-    label_texto.place(x=505, y=800)  # Asegúrate de que el texto esté debajo de la imagen
+    label_texto = Label(ventana_actualmente, text='Curso ingles', font=('Arial', 18,"bold"))  
+    label_texto.place(x=505, y=800) 
 
   # Funciones para actualizar los frames de los GIFs
     def actualizar1(indice):
@@ -346,12 +343,11 @@ def mostrar_contenido_actualmente():
     # Comienza la animación de los GIFs
     ventana_actualmente.after(0, actualizar1, 0)
     ventana_actualmente.after(0, actualizar2, 0)
-    ventana_actualmente.after(0, actualizar3, 0)  # Comienza la animación del segundo GIF
+    ventana_actualmente.after(0, actualizar3, 0) 
     ventana_actualmente.after(0, actualizar4, 0)
     ventana_actualmente.after(0, actualizar5, 0)
    
-    btn_regresar = tk.Button(ventana_actualmente,text="Regresar", command=ventana_actualmente.destroy,font=("Comic Sans MS", 19, "bold"),bg="lightcoral")  # Elimina el bordeborderwidth=0,  # Elimina el ancho del borde
-    btn_regresar.place(x=800, y=700) 
+    btn_regresar = tk.Button(ventana_actualmente,text="Regresar", command=ventana_actualmente.destroy,font=("Comic Sans MS", 19, "bold"),bg="lightcoral") 
    
 def entrar():
     ventana_entrar = tk.Toplevel(root)
@@ -374,30 +370,29 @@ def entrar():
     btn_futuro = tk.Button(ventana_entrar, text="Yo en el futuro", command=mostrar_contenido_futuro,font=("Georgia", 24, "bold"),bg="darkturquoise", width=15)
     btn_futuro.place(x=620,y=550)
 
-    btn_regresar = tk.Button(ventana_entrar,text="Regresar", command=ventana_entrar.destroy,font=("Georgia", 24, "bold"),bg="lightcoral",width=15)  # Elimina el bordeborderwidth=0,  # Elimina el ancho del borde
+    btn_regresar = tk.Button(ventana_entrar,text="Regresar", command=ventana_entrar.destroy,font=("Georgia", 24, "bold"),bg="lightcoral",width=15)  
     btn_regresar.place(x=620, y=700)
 
     # Cargar y mostrar la imagen debajo de los botones
-    imagen = Image.open("imagenes/actual.png")  # Ruta de la imagen
+    imagen = Image.open("imagenes/actual.png") 
     imagen = imagen.resize((55, 55))
     imagen_tk = ImageTk.PhotoImage(imagen)
     imagen_label = tk.Label(ventana_entrar, image=imagen_tk)
     imagen_label.image = imagen_tk
-    imagen_label.place(x=550, y=355)  # Ajustar la posición debajo de los botones
-    # Cargar y mostrar la imagen debajo de los botones
-    imagen = Image.open("imagenes/integracion.png")  # Ruta de la imagen
+    imagen_label.place(x=550, y=355)  
+   
+    imagen = Image.open("imagenes/integracion.png") 
     imagen = imagen.resize((55, 55))
     imagen_tk = ImageTk.PhotoImage(imagen)
     imagen_label = tk.Label(ventana_entrar, image=imagen_tk)
     imagen_label.image = imagen_tk
-    imagen_label.place(x=550, y=455)  # Ajustar la posición debajo de los botones
-    # Cargar y mostrar la imagen debajo de los botones
-    imagen = Image.open("imagenes/futuro.png")  # Ruta de la imagen
+    imagen_label.place(x=550, y=455)  
+    imagen = Image.open("imagenes/futuro.png")  
     imagen = imagen.resize((55, 55))
     imagen_tk = ImageTk.PhotoImage(imagen)
     imagen_label = tk.Label(ventana_entrar, image=imagen_tk)
     imagen_label.image = imagen_tk
-    imagen_label.place(x=550, y=555)  # Ajustar la posición debajo de los botones
+    imagen_label.place(x=550, y=555) 
     
 def cargar_img(ruta, tamano=(50, 50)):
     imagen = Image.open(ruta)
@@ -405,10 +400,10 @@ def cargar_img(ruta, tamano=(50, 50)):
 
     try:
         while True:
-            imagen.seek(len(frames))  # Ir al siguiente frame del GIF
+            imagen.seek(len(frames))  
             frames.append(ImageTk.PhotoImage(imagen.resize(tamano)))
     except EOFError:
-        pass  # Hemos leído todos los frames
+        pass  
 
     return frames    
  
@@ -422,11 +417,11 @@ def abrir_autores():
     titulo_label = tk.Label(ventana_autores, text="AUTORES DEL SISTEMA", font=("Trebuchet MS", 50, "bold"), bg="#00BFBF")
     titulo_label.place(x=500,y=40)
      
-    imagen_izquierda = tk.PhotoImage(file="imagenes/descarga4.png")  # Ruta de la imagen izquierda
-    imagen_izquierda = imagen_izquierda.subsample(10)  # Ajustar tamaño si es necesario
+    imagen_izquierda = tk.PhotoImage(file="imagenes/descarga4.png")  
+    imagen_izquierda = imagen_izquierda.subsample(10) 
     imagen_label_izquierda = tk.Label(ventana_autores, image=imagen_izquierda,bg="black")
     imagen_label_izquierda.image = imagen_izquierda
-    imagen_label_izquierda.place(x=100, y=180)  # Ajustar las coordenadas x e y según sea necesario
+    imagen_label_izquierda.place(x=100, y=180) 
 
     # Información a la derecha
     info_text = "Datos personales\nNombre: Alfredo Valparaiso Pascual\nDireccion: Calle Efren Mancilla, Zacatepec, Morelos\nTelefono:7361089433\nEmail:L20091196@Zacatepec.tecnm.mx"
@@ -434,11 +429,11 @@ def abrir_autores():
     info_label.place(x=500,y=180)
 
     #AUTOR 2
-    imagen_izquierda = tk.PhotoImage(file="imagenes/perro.png")  # Ruta de la imagen izquierda
-    imagen_izquierda = imagen_izquierda.subsample(2)  # Ajustar tamaño si es necesario
+    imagen_izquierda = tk.PhotoImage(file="imagenes/perro.png")  
+    imagen_izquierda = imagen_izquierda.subsample(2) 
     imagen_label_izquierda = tk.Label(ventana_autores, image=imagen_izquierda,bg="black")
     imagen_label_izquierda.image = imagen_izquierda
-    imagen_label_izquierda.place(x=100, y=500)  # Ajustar las coordenadas x e y según sea necesario
+    imagen_label_izquierda.place(x=100, y=500)  
 
     # Información a la derecha
     info_text = "Datos personales\nNombre: Perrito\nDireccion: Calle Efren Mancilla, Zacatepec, Morelos\nTelefono:7361089433\nEmail:Perrito@Zacatepec.tecnm.mx"
@@ -459,11 +454,11 @@ def abrir_ventana_acerca_de():
     titulo_label = tk.Label(ventana_acerca_de, text="ACERCA DEL SISTEMA", font=("Trebuchet MS", 50, "bold"), bg="#00BFBF")
     titulo_label.place(x=500,y=40) 
 
-    imagen_izquierda = tk.PhotoImage(file="imagenes/logootro.png")  # Ruta de la imagen izquierda
-    imagen_izquierda = imagen_izquierda.subsample(3)  # Ajustar tamaño si es necesario
+    imagen_izquierda = tk.PhotoImage(file="imagenes/logootro.png")  
+    imagen_izquierda = imagen_izquierda.subsample(3)  
     imagen_label_izquierda = tk.Label(ventana_acerca_de, image=imagen_izquierda,bg="black")
     imagen_label_izquierda.image = imagen_izquierda
-    imagen_label_izquierda.place(x=610, y=180)  # Ajustar las coordenadas x e y según sea necesario
+    imagen_label_izquierda.place(x=610, y=180)  
 
     # Información a la derecha
     info_text = "Versión 1. \nEste software es para uso exclusivo de los alumnos de la materia dde Inteligencia \nArtificial de la carrera de Ingenieria en sistemas..."
@@ -476,22 +471,17 @@ def abrir_ventana_acerca_de():
     btn_regresar = tk.Button(ventana_acerca_de, text="Regresar", command=ventana_acerca_de.destroy,  font=("Comic Sans MS", 19, "bold"), bg="lightcoral", image=logo_salir, compound="left")
     btn_regresar.place(x=1300,y=750)
 
-#inicioooooooooooooooooooooooooo
 
-
-
-# INICIO Función para agregar SINTOMAS  aqui
-# INICIO Función para agregar SINTOMAS aquí
 def agregar_sintomas():
-    global objetos, indice_actual, imagen_path  # Variables globales
+    global objetos, indice_actual, imagen_path  
     ventana_sintoma = tk.Toplevel(root)
     ventana_sintoma.title("Agregar síntomas")
     ventana_sintoma.attributes("-fullscreen", True)
     
     # Inicializar las variables
-    imagen_path = ""  # Inicializamos con una cadena vacía
-    objetos = []  # Lista para almacenar los objetos de la base de datos
-    indice_actual = 0  # Índice para la navegación
+    imagen_path = "" 
+    objetos = [] 
+    indice_actual = 0 
 
     def cargar_objetos_desde_db():
         global objetos
@@ -499,7 +489,6 @@ def agregar_sintomas():
         if conexion:
             cursor = conexion.cursor()
             try:
-                # Cambiar la consulta para que funcione con la tabla `sintomas`
                 cursor.execute("SELECT sintoma, imagen_path FROM sintomas")
                 objetos = cursor.fetchall()  
             except mysql.connector.Error as e:
@@ -509,7 +498,7 @@ def agregar_sintomas():
                 conexion.close()
 
     def cargar_y_mostrar_imagen(label, ruta=None, tamano_maximo=(340, 340)):
-        global imagen_path  # Usamos imagen_path de forma global
+        global imagen_path 
 
         if not ruta:
             ruta = filedialog.askopenfilename(
@@ -519,11 +508,10 @@ def agregar_sintomas():
             )
 
         if not ruta:
-            return  # El usuario canceló la selección
+            return  
 
-        imagen_path = ruta  # Guardamos la ruta de la imagen seleccionada en imagen_path
+        imagen_path = ruta 
 
-        # Código para redimensionar y mostrar la imagen...
         imagen_original = Image.open(ruta)
         
         ancho_label, alto_label = tamano_maximo
@@ -537,17 +525,17 @@ def agregar_sintomas():
         imagen_tk = ImageTk.PhotoImage(imagen_redimensionada)
         
         label.config(image=imagen_tk)
-        label.image = imagen_tk  # Mantener una referencia
+        label.image = imagen_tk  
 
         return ruta
 
     def mostrar_objeto(indice):
         global objetos, imagen_path
         if objetos:
-            sintoma, imagen_path = objetos[indice]  # Adaptar a los campos de la tabla `sintomas`
+            sintoma, imagen_path = objetos[indice]  
             
             nombre_entry.delete(0, tk.END)
-            nombre_entry.insert(0, sintoma)  # Mostrar el nombre del síntoma
+            nombre_entry.insert(0, sintoma) 
 
             # Asegurarse de que el label de imagen tenga un tamaño antes de cargar
             ventana_sintoma.update_idletasks()
@@ -656,8 +644,6 @@ def agregar_sintomas():
                     conexion.close()
 
 
-
-#EMPIEZA CONSULTA
     def realizar_consulta():
         tipo_consulta = messagebox.askquestion("Tipo de Consulta", "¿Desea realizar una consulta general?",
                                                icon='question', parent=ventana_sintoma)
@@ -934,7 +920,7 @@ def agregar_sintomas():
                     conexion.close()
 
 
-        # Botón para avanzar a la siguiente entrada
+    # Botón para avanzar a la siguiente entrada
     button_adelante = tk.Button(ventana_sintoma, text="Adelante", command=mover_adelante, font=("Georgia", 18, "bold"), bg="gray70", width=10)
     button_adelante.place(x=210, y=550)
 
@@ -978,31 +964,15 @@ def agregar_sintomas():
 
 
 
-
-
-
-##FIN
-##
-##
-##
-
-
-
-
-
-
-#finnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
-# INICIO Función para agregar ENFERMEDAD  aqui
 def agregar_objeto():
-    global objetos, indice_actual, imagen_path  # Variables globales
+    global objetos, indice_actual, imagen_path 
     ventana_agregarobj = tk.Toplevel(root)
     ventana_agregarobj.title("Agregar obj")
     ventana_agregarobj.attributes("-fullscreen", True)
     
-    # Inicializar las variables
-    imagen_path = ""  # Inicializamos con una cadena vacía
-    objetos = []  # Lista para almacenar los objetos de la base de datos
-    indice_actual = 0  # Índice para la navegación
+    imagen_path = ""  
+    objetos = []  
+    indice_actual = 0  
 
 
     def cargar_objetos_desde_db():
@@ -1012,7 +982,7 @@ def agregar_objeto():
             cursor = conexion.cursor()
             try:
                 cursor.execute("SELECT nombre_objeto, descripcion, imagen_path FROM enfermedades")
-                objetos = cursor.fetchall()  # Cargar todos los objetos en la lista
+                objetos = cursor.fetchall() 
             except mysql.connector.Error as e:
                 messagebox.showerror("Error al cargar", str(e), parent=ventana_agregarobj)
             finally:
@@ -1020,7 +990,7 @@ def agregar_objeto():
                 conexion.close()
 
     def cargar_y_mostrar_imagen(label, ruta=None, tamano_maximo=(340, 340)):
-        global imagen_path  # Usamos imagen_path de forma global
+        global imagen_path 
 
         if not ruta:
             ruta = filedialog.askopenfilename(
@@ -1030,14 +1000,12 @@ def agregar_objeto():
             )
 
         if not ruta:
-            return  # El usuario canceló la selección
+            return 
 
-        imagen_path = ruta  # Guardamos la ruta de la imagen seleccionada en imagen_path
+        imagen_path = ruta 
 
-        # Código para redimensionar y mostrar la imagen...
         imagen_original = Image.open(ruta)
         
-        # Usamos el tamaño máximo si el label aún no tiene dimensiones
         ancho_label, alto_label = tamano_maximo
         
         relacion_aspecto = min(ancho_label / imagen_original.width, alto_label / imagen_original.height)
@@ -1049,7 +1017,7 @@ def agregar_objeto():
         imagen_tk = ImageTk.PhotoImage(imagen_redimensionada)
         
         label.config(image=imagen_tk)
-        label.image = imagen_tk  # Mantener una referencia
+        label.image = imagen_tk 
 
         return ruta
 
@@ -1063,7 +1031,6 @@ def agregar_objeto():
             descripcion_text.delete("1.0", tk.END)
             descripcion_text.insert("1.0", descripcion)
 
-            # Asegurarse de que el label de imagen tenga un tamaño antes de cargar
             ventana_agregarobj.update_idletasks()
             cargar_y_mostrar_imagen(imagen_label, ruta=imagen_path)
 
@@ -1110,7 +1077,6 @@ def agregar_objeto():
         else:
             indice_actual = len(objetos) - 1
             mostrar_objeto(indice_actual)
-       #FUNCION PARA ELIMINAR EL OBJETO SEÑALADO EN LA NAVEGACION     
     def eliminar_objeto():
         global indice_actual, objetos
         if not objetos:
@@ -1131,14 +1097,12 @@ def agregar_objeto():
                     conexion.commit()
                     messagebox.showinfo("Éxito", "Enfermedad eliminada exitosamente", parent=ventana_agregarobj)
                     
-                    # Actualizar la lista de objetos y mostrar el siguiente
                     cargar_objetos_desde_db()
                     if objetos:
                         if indice_actual >= len(objetos):
                             indice_actual = len(objetos) - 1
                         mostrar_objeto(indice_actual)
                     else:
-                        # Si no quedan objetos, limpiar los campos
                         nombre_entry.delete(0, tk.END)
                         descripcion_text.delete("1.0", tk.END)
                         imagen_label.config(image="")
@@ -1148,7 +1112,6 @@ def agregar_objeto():
                     cursor.close()
                     conexion.close()
 
-    #EMPIEZA CONSULTA
     def realizar_consulta():
         tipo_consulta = messagebox.askquestion("Tipo de Consulta", "¿Desea realizar una consulta general?",
                                                icon='question',parent=ventana_agregarobj)
@@ -1178,11 +1141,9 @@ def agregar_objeto():
                                 fieldbackground="#D3D3D3", foreground="black")
                 style.configure("Treeview.Heading", font=('Helvetica', 10, 'bold'))
 
-                # Crear un frame para contener el Treeview y la barra de desplazamiento
                 frame = tk.Frame(ventana_resultados)
                 frame.pack(pady=20, padx=20, fill=tk.BOTH, expand=True)
 
-                # Crear un canvas y un frame interior para el scrolling
                 canvas = tk.Canvas(frame)
                 scrollbar = ttk.Scrollbar(frame, orient="vertical", command=canvas.yview)
                 scrollable_frame = tk.Frame(canvas)
@@ -1197,7 +1158,6 @@ def agregar_objeto():
                 canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
                 canvas.configure(yscrollcommand=scrollbar.set)
 
-                # Colocar el título en la fila 0 y abarcar todas las columnas
                 tk.Label(scrollable_frame, text="Enfermedades", font=('Helvetica', 20, 'bold')).grid(row=0, column=0, columnspan=4, pady=10)
 
                 # Crear etiquetas para los encabezados en la fila 1
@@ -1312,13 +1272,11 @@ def agregar_objeto():
                     cursor.close()
                     conexion.close()
 
-# FIN Función para agregar ENFERMEDAD
 
     ventana_agregarobj.configure(bg="#00BFBF")
     titulo_label = tk.Label(ventana_agregarobj, text="DATOS ENFERMEDADES", font=("Trebuchet MS", 50, "bold"), bg="#00BFBF")
     titulo_label.place(x=530, y=40)
 
-    # Labels y Entries para los datos del objeto
     tk.Label(ventana_agregarobj, text="Nombre_enfermedad:", font=("Trebuchet MS", 20), bg="#00BFBF").place(x=250, y=150)
     nombre_entry = tk.Entry(ventana_agregarobj, font=("Trebuchet MS", 18))
     nombre_entry.place(x=250, y=200)
@@ -1363,7 +1321,6 @@ def agregar_objeto():
         if conexion:
             cursor = conexion.cursor()
             try:
-                # Verificar si el nombre ya existe en la base de datos
                 cursor.execute("SELECT COUNT(*) FROM enfermedades WHERE nombre_objeto = %s", (nombre_objeto,))
                 (count,) = cursor.fetchone()
                 
@@ -1371,7 +1328,6 @@ def agregar_objeto():
                     messagebox.showwarning("Nombre duplicado", "El nombre de la enfermedad ya existe. Introduce uno diferente.", parent=ventana_agregarobj)
                     return
 
-                # Si el nombre no existe, insertar el nuevo objeto
                 cursor.execute("""
                     INSERT INTO enfermedades (nombre_objeto, descripcion, imagen_path)
                     VALUES (%s, %s, %s)
@@ -1380,10 +1336,8 @@ def agregar_objeto():
                 conexion.commit()
                 messagebox.showinfo("Éxito", "Enfermedad agregada exitosamente", parent=ventana_agregarobj)
                 
-                # Recargar los objetos desde la base de datos después de la inserción exitosa
                 cargar_objetos_desde_db()
 
-                # Actualizar el índice actual al último objeto (el recién agregado)
                 indice_actual = len(objetos) - 1
                 mostrar_objeto(indice_actual)
 
@@ -1405,14 +1359,12 @@ def agregar_objeto():
         nueva_descripcion = descripcion_text.get("1.0", tk.END).strip()
         objeto_actual = objetos[indice_actual]
 
-        # Verificar si hay cambios
         if (nuevo_nombre == objeto_actual[0] and
             nueva_descripcion == objeto_actual[1] and
             imagen_path == objeto_actual[2]):
             messagebox.showinfo("Sin cambios", "No se han realizado modificaciones.", parent=ventana_agregarobj)
             return
 
-        # Preguntar al usuario si está seguro de modificar
         confirmacion = messagebox.askyesno("Confirmar modificación", 
                                         f"¿Está seguro que desea modificar la enfermedad '{objeto_actual[0]}'?", 
                                         parent=ventana_agregarobj)
@@ -1431,7 +1383,6 @@ def agregar_objeto():
                     conexion.commit()
                     messagebox.showinfo("Éxito", "Enfermedad modificado exitosamente", parent=ventana_agregarobj)
                     
-                    # Actualizar la lista de objetos y mostrar el objeto modificado
                     cargar_objetos_desde_db()
                     for i, obj in enumerate(objetos):
                         if obj[0] == nuevo_nombre:
@@ -1459,7 +1410,6 @@ def agregar_objeto():
     
     cargar_objetos_desde_db()
     if objetos:
-        # Retrasar la carga de la primera imagen
         ventana_agregarobj.after(100, lambda: mostrar_objeto(indice_actual))
 
     button_inicio = tk.Button(ventana_agregarobj, text="Inicio", command=ir_a_inicio, font=("Georgia", 18, "bold"), bg="gray70", width=10)
@@ -1468,8 +1418,6 @@ def agregar_objeto():
     button_final = tk.Button(ventana_agregarobj, text="Final", command=ir_a_final, font=("Georgia", 18, "bold"), bg="gray70", width=10)
     button_final.place(x=1110, y=550)
 
-
-    # Botón para agregar el objeto
     agregar_button = tk.Button(ventana_agregarobj, text="Altas", command=guardar_objeto, font=("Georgia", 24, "bold"), bg="#6A70FE", width=10)
     agregar_button.place(x=110, y=650)
 
@@ -1479,7 +1427,6 @@ def agregar_objeto():
     consultas_button = tk.Button(ventana_agregarobj, text="Consultas", command=realizar_consulta, font=("Georgia", 24, "bold"), bg="green", width=10)
     consultas_button.place(x=690, y=650)
 
-    # Botón para actualizar un objeto
     Modificar_button = tk.Button(ventana_agregarobj, text="Modificar", command=modificar, font=("Georgia", 24, "bold"), bg="#FFD700", width=10)
     Modificar_button.place(x=950, y=650)
     
@@ -1488,7 +1435,7 @@ def agregar_objeto():
 
 
 
-ventana_menu_expe = None  # Variable global
+ventana_menu_expe = None 
 
 def mostrar_menu_experto():
     global ventana_menu_expe
@@ -1508,37 +1455,32 @@ def mostrar_menu_experto():
     agregarCarac= tk.Button(ventana_menu_expe, text="Agregar sintomas", command=agregar_sintomas,font=("Georgia", 24, "bold"),bg="#BFBF00", width=20)
     agregarCarac.place(x=620,y=450)
 
-    # Botón para abrir cuadroRelacion.py
     cuadroRelacion = tk.Button(ventana_menu_expe, text="Cuadro-Relación", command=abrir_cuadro_relacion, font=("Georgia", 24, "bold"), bg="darkturquoise", width=20)
     cuadroRelacion.place(x=620, y=550)
 
     btn_regresar = tk.Button(ventana_menu_expe,text="Regresar", command=ventana_menu_expe.destroy,font=("Georgia", 24, "bold"),bg="lightcoral",width=15)  # Elimina el bordeborderwidth=0,  # Elimina el ancho del borde
     btn_regresar.place(x=1100, y=750)
 
-    # Cargar y mostrar la imagen debajo de los botones
-    imagen = Image.open("imagenes/actual.png")  # Ruta de la imagen
+   
+    imagen = Image.open("imagenes/actual.png") 
     imagen = imagen.resize((55, 55))
     imagen_tk = ImageTk.PhotoImage(imagen)
     imagen_label = tk.Label(ventana_menu_expe, image=imagen_tk)
     imagen_label.image = imagen_tk
-    imagen_label.place(x=550, y=355)  # Ajustar la posición debajo de los botones
-    # Cargar y mostrar la imagen debajo de los botones
-    imagen = Image.open("imagenes/integracion.png")  # Ruta de la imagen
+    imagen_label.place(x=550, y=355) 
+    imagen = Image.open("imagenes/integracion.png")  
     imagen = imagen.resize((55, 55))
     imagen_tk = ImageTk.PhotoImage(imagen)
     imagen_label = tk.Label(ventana_menu_expe, image=imagen_tk)
     imagen_label.image = imagen_tk
-    imagen_label.place(x=550, y=455)  # Ajustar la posición debajo de los botones
-    # Cargar y mostrar la imagen debajo de los botones
-    imagen = Image.open("imagenes/futuro.png")  # Ruta de la imagen
+    imagen_label.place(x=550, y=455) 
+    imagen = Image.open("imagenes/futuro.png") 
     imagen = imagen.resize((55, 55))
     imagen_tk = ImageTk.PhotoImage(imagen)
     imagen_label = tk.Label(ventana_menu_expe, image=imagen_tk)
     imagen_label.image = imagen_tk
-    imagen_label.place(x=550, y=555)  # Ajustar la posición debajo de los botones
-    # Función para validar la contraseña
+    imagen_label.place(x=550, y=555) 
 
-# Importar el nuevo módulo al inicio del archivo
 from interfazUsuario import interfaz_usuario
 
 def interfaces():
@@ -1552,20 +1494,18 @@ def interfaces():
     titulo_label.place(x=100,y=100)
 
     def pedir_contraseña():
-        contraseña_correcta = ""  # Aquí defines la contraseña correcta
-        # Mostrar cuadro de diálogo para que el usuario ingrese la contraseña
+        contraseña_correcta = "" 
         contraseña_ingresada = simpledialog.askstring("Contraseña", "Ingrese la contraseña:", show='*')
 
-        # Validar si la contraseña es correcta
         if contraseña_ingresada == contraseña_correcta:
             messagebox.showinfo("Acceso concedido", "La contraseña es correcta", parent=ventana_interfaces)
-            mostrar_menu_experto()  # Llama a la función que abre el menú experto
+            mostrar_menu_experto()  
         else:
             messagebox.showerror("Contraseña incorrecta", "La contraseña ingresada es incorrecta, vuelve a intentarlo")
 
     def abrir_interfaz_usuario():
-        ventana_interfaces.withdraw()  # Oculta la ventana actual
-        interfaz_usuario(ventana_interfaces)  # Pasa la referencia de la ventana actual
+        ventana_interfaces.withdraw() 
+        interfaz_usuario(ventana_interfaces)  
             
 
     experto = tk.Button( ventana_interfaces, text="Experto   ", command=pedir_contraseña, font=("Georgia", 24, "bold"), bg="#6A70FE", width=15)
@@ -1577,38 +1517,36 @@ def interfaces():
     btn_regresar = tk.Button(ventana_interfaces,text="Regresar", command=ventana_interfaces.destroy,font=("Georgia", 24, "bold"),bg="#FF6B6B",width=15)  # Elimina el bordeborderwidth=0,  # Elimina el ancho del borde
     btn_regresar.place(x=1100, y=700)
 
-    # Cargar y mostrar la imagen debajo de los botones
-    imagen = Image.open("imagenes/actual.png")  # Ruta de la imagen
+    imagen = Image.open("imagenes/actual.png")  
     imagen = imagen.resize((55, 55))
     imagen_tk = ImageTk.PhotoImage(imagen)
     imagen_label = tk.Label(ventana_interfaces, image=imagen_tk)
     imagen_label.image = imagen_tk
-    imagen_label.place(x=550, y=355)  # Ajustar la posición debajo de los botones
-    # Cargar y mostrar la imagen debajo de los botones
-    imagen = Image.open("imagenes/integracion.png")  # Ruta de la imagen
+    imagen_label.place(x=550, y=355) 
+    imagen = Image.open("imagenes/integracion.png") 
     imagen = imagen.resize((55, 55))
     imagen_tk = ImageTk.PhotoImage(imagen)
     imagen_label = tk.Label(ventana_interfaces, image=imagen_tk)
     imagen_label.image = imagen_tk
-    imagen_label.place(x=550, y=455)  # Ajustar la posición debajo de los botones
+    imagen_label.place(x=550, y=455) 
 
 def abrir_cuadro_relacion():
-    ventana_menu_expe.withdraw()  # Hide the expert menu window
-    import cuadroRelacion  # Import the cuadroRelacion module
-    cuadroRelacion.abrir_cuadro_relacion(ventana_menu_expe)  # Pass the expert menu window as an argument
+    ventana_menu_expe.withdraw()  
+    import cuadroRelacion  
+    cuadroRelacion.abrir_cuadro_relacion(ventana_menu_expe)  
 
 
 #PAGINA PRINCIPAL
 def cargar_imagen_izquierda():
-    imagen_izquierda = tk.PhotoImage(file="imagenes/descarga2.png")  # Ruta de la imagen izquierda
-    imagen_izquierda = imagen_izquierda.subsample(7)  # Ajustar tamaño si es necesario
+    imagen_izquierda = tk.PhotoImage(file="imagenes/descarga2.png")  
+    imagen_izquierda = imagen_izquierda.subsample(7)
     imagen_label_izquierda = tk.Label(root, image=imagen_izquierda)
     imagen_label_izquierda.image = imagen_izquierda
-    imagen_label_izquierda.place(x=100, y=10)  # Ajustar las coordenadas x e y según sea necesario
+    imagen_label_izquierda.place(x=100, y=10)  
 
 def cargar_imagen_derecha():
-    imagen_derecha = tk.PhotoImage(file="imagenes/descarga1.png")  # Ruta de la imagen derecha
-    imagen_derecha = imagen_derecha.subsample(1)  # Ajustar tamaño si es necesario
+    imagen_derecha = tk.PhotoImage(file="imagenes/descarga1.png")  
+    imagen_derecha = imagen_derecha.subsample(1)  
     imagen_label_derecha = tk.Label(root, image=imagen_derecha)
     imagen_label_derecha.image = imagen_derecha
     imagen_label_derecha.place(x=1200, y=10)
@@ -1625,15 +1563,11 @@ if __name__ == "__main__":
     root.iconbitmap("imagenes/pagina-de-inicio.ico")  
 
 
-    # Cargar la imagen de fondo
-    fondo_imagen = Image.open("imagenes/itz.png")  # Asegúrate de usar "/" en la ruta
-    #fondo_imagen = fondo_imagen.resize((root.winfo_screenwidth(), root.winfo_screenheight()), Image.ANTIALIAS)  # Redimensionar
+    fondo_imagen = Image.open("imagenes/itz.png") 
     fondo_photo = ImageTk.PhotoImage(fondo_imagen)
 
-    # Crear un Label para mostrar la imagen de fondo
     fondo_label = tk.Label(root, image=fondo_photo)
     fondo_label.place(x=0, y=0, relwidth=1, relheight=1)
-    # Texto con estilo
     texto = tk.Label(root, text="BIENVENIDOS\n INSTITUTO TECNOLÓGICO DE ZACATEPEC", font=("Comic Sans MS", 26, "bold"), bg="#FAEBD7")
     texto.pack(pady=160)
 
@@ -1648,7 +1582,6 @@ if __name__ == "__main__":
     logo_salir = cargar_img("imagenes/dejar.png")
     logo_autor = cargar_img("imagenes/derechos-de-autor.png")
 
-    # Crear los botones y posicionarlos con el método place(), añadiendo las imágenes
     btn_acerca_de = tk.Button(root, text="Acerca de", command=abrir_ventana_acerca_de, font=("Comic Sans MS", 19, "bold"), bg="yellow", image=logo_acerca_de, compound="left")
     btn_acerca_de.place(x=1300, y=600)
 

@@ -43,7 +43,7 @@ def abrir_busqueda_sintomas(ventana_anterior):
 
     # Etiqueta para síntomas
     label_sintomas = tk.Label(ventana_sintomas, text="Síntomas", font=("Trebuchet MS", 18), background="#6FB0B5")
-    label_sintomas.place(x=250, y=210)  # Posición de la etiqueta
+    label_sintomas.place(x=250, y=210) 
 
     # ComboBox para síntomas
     sintomas = obtener_sintomas()
@@ -121,12 +121,10 @@ def abrir_busqueda_sintomas(ventana_anterior):
         """Manejador de evento cuando se selecciona un síntoma del combobox"""
         sintoma = combo_sintomas.get()
         if sintoma:
-            # Verificar si el síntoma ya está en la tabla
             items = tabla.get_children()
             if not any(tabla.item(item)['values'][0] == sintoma for item in items):
                 tabla.insert("", "end", values=(sintoma,))
                 mostrar_imagen(sintoma)
-                #combo_sintomas.set('')  # Limpiar selección
 
     def on_tabla_seleccionado(event):
         """Manejador de evento cuando se selecciona un ítem en la tabla"""
@@ -140,15 +138,13 @@ def abrir_busqueda_sintomas(ventana_anterior):
         seleccion = tabla.selection()
         if seleccion:
             tabla.delete(seleccion)
-            # Quitar la imagen mostrada en imagen_label
-            imagen_label.config(image='')  # Borra la imagen
+            imagen_label.config(image='')  
             imagen_label.image = None  
         else:
             messagebox.showwarning("Advertencia", 
                                  "Por favor, seleccione un síntoma para eliminar", 
                                  parent=ventana_sintomas)
 
-    # Botones
     estilo_boton = {"font": ("Georgia", 18, "bold"), "width": 12}
     
     btn_eliminar = tk.Button(ventana_sintomas, 
@@ -175,11 +171,9 @@ def abrir_busqueda_sintomas(ventana_anterior):
                           **estilo_boton)
     btn_volver.place(x=1000, y=650)
 
-    # Vincular eventos
     combo_sintomas.bind('<<ComboboxSelected>>', on_sintoma_seleccionado)
-    tabla.bind('<<TreeviewSelect>>', on_tabla_seleccionado)  # Nuevo evento para la tabla
+    tabla.bind('<<TreeviewSelect>>', on_tabla_seleccionado)  
 
-    # Cargar síntomas iniciales
     if sintomas:
         combo_sintomas['values'] = sintomas
     else:

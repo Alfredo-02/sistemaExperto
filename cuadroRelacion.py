@@ -1,16 +1,16 @@
 import tkinter as tk
 from tkinter import messagebox
-import mysql.connector  # type: ignore
-from tkinter import ttk  # Importar ttk para usar el ComboBox
-from PIL import Image, ImageTk  # Asegúrate de tener Pillow instalado# type: ignore
+import mysql.connector  
+from tkinter import ttk  
+from PIL import Image, ImageTk 
 import tkinter.font as tkFont
 def conectar_db():
     try:
         conexion = mysql.connector.connect(
-            host="localhost",  # Cambia esto si es necesario
-            user="root",  # Reemplaza con tu usuario
-            password="123456",  # Reemplaza con tu contraseña
-            database="SistemaExperto"  # Reemplaza con tu base de datos
+            host="localhost",  
+            user="root",  
+            password="", 
+            database=""  
         )
         return conexion
     except mysql.connector.Error as e:
@@ -77,75 +77,59 @@ def abrir_cuadro_relacion(ventana_menu_expe):
     label = tk.Label(ventana_cuadro_relacion, text="CUADRO-RELACIÓN", font=("Trebuchet MS", 50, "bold"), bg="#00BFBF")
     label.pack(pady=50)
 
-    # Etiqueta para seleccionar enfermedad
     label_enfermedad = tk.Label(ventana_cuadro_relacion, text="Selecciona una enfermedad:", font=("Trebuchet MS", 20), bg="#00BFBF")
     label_enfermedad.place(x=250, y=150)
 
-    # Obtener las enfermedades de la base de datos
     enfermedades = obtener_enfermedades()
     
-    fuente = tkFont.Font(family="Helvetica", size=15)  # Cambia "Helvetica" y 12 por la fuente y tamaño que desees
+    fuente = tkFont.Font(family="Helvetica", size=15) 
 
-    # Establecer el estilo del Combobox
     style = ttk.Style()
-    style.configure("TCombobox", font=fuente)  # Aplicar la fuente al Combobox
+    style.configure("TCombobox", font=fuente)  
 
-    # Crear el Combobox con un ancho específico
-    combo_enfermedad = ttk.Combobox(ventana_cuadro_relacion, values=enfermedades, state="readonly", width=30)  # Cambia 30 por el ancho que desees
+    combo_enfermedad = ttk.Combobox(ventana_cuadro_relacion, values=enfermedades, state="readonly", width=30)  
     combo_enfermedad.place(x=250, y=200)
 
-    # Aplicar la fuente personalizada al Combobox
     combo_enfermedad['font'] = fuente
 
-    # Label para mostrar la imagen
     imagen_label = tk.Label(ventana_cuadro_relacion, bg="#00BFBF")
     imagen_label.place(x=950, y=150)
 
-    # Etiqueta para seleccionar sintoma
     label_sintoma = tk.Label(ventana_cuadro_relacion, text="Selecciona un síntoma:", font=("Trebuchet MS", 20), bg="#00BFBF")
     label_sintoma.place(x=250, y=235)
 
-    # sintomas de la base de datos
     sintomas = obtener_sintomas()
     
-    # Crear un ComboBox para seleccionar el sintoma
     combo_sintoma = ttk.Combobox(ventana_cuadro_relacion, values=sintomas, state="readonly", width=30)
     combo_sintoma.place(x=250, y=285)
 
     combo_sintoma['font'] = fuente
 
-    # Etiqueta para seleccionar peso
     label_peso = tk.Label(ventana_cuadro_relacion, text="Selecciona peso:", font=("Trebuchet MS", 20), bg="#00BFBF")
     label_peso.place(x=250, y=315)
 
-    # Frame para organizar el campo de texto y el símbolo %
     frame_peso = tk.Frame(ventana_cuadro_relacion, width=200, height=100)
     frame_peso.place(x=250, y=360)
 
-    # Campo de texto para ingresar el peso
     entry_peso = tk.Entry(frame_peso, width=10, font=fuente)
     entry_peso.pack(side="left")
 
-    # Etiqueta de porcentaje %
     label_porcentaje = tk.Label(frame_peso, text="%")
     label_porcentaje.pack(side="left")
 
-    # Crear un estilo para la tabla
     style = ttk.Style()
-    fuente_tabla = tkFont.Font(family="Helvetica", size=15)  # Cambia "Helvetica" y 12 por la fuente y tamaño que desees
-    fuente_encabezados = tkFont.Font(family="Helvetica", size=15, weight="bold")  # Fuente para encabezados en negrita
+    fuente_tabla = tkFont.Font(family="Helvetica", size=15)  
+    fuente_encabezados = tkFont.Font(family="Helvetica", size=15, weight="bold") 
 
-    style.configure("Treeview", font=fuente_tabla)  # Cambia el estilo de los datos
-    style.configure("Treeview.Heading", font=fuente_encabezados, background="lightblue", foreground="black")  # Estilo de encabezados
+    style.configure("Treeview", font=fuente_tabla) 
+    style.configure("Treeview.Heading", font=fuente_encabezados, background="lightblue", foreground="black") 
 
-    # Tabla para mostrar características seleccionadas
     tabla = ttk.Treeview(ventana_cuadro_relacion, columns=("Síntoma", "Peso"), show="headings")
     tabla.heading("Síntoma", text="Síntoma")
     tabla.heading("Peso", text="Peso")
 
-    # Ajustar el ancho de las columnas
-    tabla.column("Síntoma", width=500)  # Ajustar ancho y centrar
-    tabla.column("Peso", width=100, anchor="center")  # Ajustar ancho y centrar
+    tabla.column("Síntoma", width=500)  
+    tabla.column("Peso", width=100, anchor="center") 
 
     tabla.place(x=250, y=400, width=600, height=200)
 
@@ -161,7 +145,6 @@ def abrir_cuadro_relacion(ventana_menu_expe):
         peso = entry_peso.get()
         
         if sintoma and peso:
-            # Verificar si el síntoma ya existe en la tabla
             for item in tabla.get_children():
                 if tabla.item(item)['values'][0] == sintoma:
                     tabla.item(item, values=(sintoma, f"{peso}%"))
@@ -169,13 +152,12 @@ def abrir_cuadro_relacion(ventana_menu_expe):
             else:
                 tabla.insert("", "end", values=(sintoma, f"{peso}%"))
             
-            # Limpiar los campos después de añadir
-            combo_sintoma.set('')  # Limpiar el Combobox del síntoma
-            entry_peso.delete(0, tk.END)  # Limpiar el campo de texto del peso
+       
+            combo_sintoma.set('') 
+            entry_peso.delete(0, tk.END) 
         else:
             messagebox.showwarning("Advertencia", "Por favor, completa todos los campos.", parent=ventana_cuadro_relacion)
 
-    # Configuración del estilo para los botones
     style = ttk.Style()
     style.configure('CustomButton.TButton', 
         font=('Arial', 12),
@@ -188,17 +170,14 @@ def abrir_cuadro_relacion(ventana_menu_expe):
         relief=[('pressed', 'sunken'), ('!pressed', 'raised')]
     )
 
-    # Creación de los botones
     boton1 = ttk.Button(ventana_cuadro_relacion, text="Añadir", command=añadir_caracteristica, style='CustomButton.TButton')
     boton1.place(x=250, y=620, width=100, height=30)
 
     def cancelar_cambios():
         respuesta = messagebox.askyesno("Confirmar", "¿Estás seguro de que quieres cancelar los cambios?", parent=ventana_cuadro_relacion)
         if respuesta:
-            # Limpiar la tabla
             for i in tabla.get_children():
                 tabla.delete(i)
-            # Volver a cargar los datos originales de la base de datos
             buscar_sintomas()
             messagebox.showinfo("Información", "Cambios cancelados. Se han restaurado los datos originales.", parent=ventana_cuadro_relacion)
 
@@ -223,7 +202,6 @@ def abrir_cuadro_relacion(ventana_menu_expe):
             if conexion:
                 try:
                     with conexion.cursor() as cursor:
-                        # Obtener el id_enfermedad y id_sintoma
                         cursor.execute("SELECT id_enfermedad FROM enfermedades WHERE nombre_objeto = %s", (enfermedad,))
                         id_enfermedad = cursor.fetchone()
                         
@@ -233,11 +211,9 @@ def abrir_cuadro_relacion(ventana_menu_expe):
                         if id_enfermedad and id_sintoma:
                             id_enfermedad = id_enfermedad[0]
                             id_sintoma = id_sintoma[0]
-                            # Borrar la relación específica
                             cursor.execute("DELETE FROM cuadro_relacion WHERE id_enfermedad = %s AND id_sintoma = %s", (id_enfermedad, id_sintoma))
                             conexion.commit()
                             messagebox.showinfo("Éxito", f"Se ha borrado la relación para el síntoma '{sintoma}'.", parent=ventana_cuadro_relacion)
-                            # Eliminar el item de la tabla
                             tabla.delete(seleccion[0])
                         else:
                             messagebox.showinfo("Información", "No se encontró la relación en la base de datos.", parent=ventana_cuadro_relacion)
@@ -268,12 +244,11 @@ def abrir_cuadro_relacion(ventana_menu_expe):
                     return
                 id_enfermedad = id_enfermedad[0]
 
-                # Eliminar relaciones existentes para esta enfermedad
                 cursor.execute("DELETE FROM cuadro_relacion WHERE id_enfermedad = %s", (id_enfermedad,))
 
                 for item in tabla.get_children():
                     sintoma, peso = tabla.item(item)['values']
-                    peso = peso.rstrip('%')  # Eliminar el símbolo '%' del peso
+                    peso = peso.rstrip('%')  
 
                     cursor.execute("SELECT id_sintoma FROM sintomas WHERE sintoma = %s", (sintoma,))
                     id_sintoma = cursor.fetchone()
@@ -281,7 +256,6 @@ def abrir_cuadro_relacion(ventana_menu_expe):
                         continue
                     id_sintoma = id_sintoma[0]
 
-                    # Insertar nueva relación
                     cursor.execute("""
                         INSERT INTO cuadro_relacion (id_enfermedad, id_sintoma, peso)
                         VALUES (%s, %s, %s)
@@ -290,9 +264,8 @@ def abrir_cuadro_relacion(ventana_menu_expe):
                 conexion.commit()
                 messagebox.showinfo("Éxito", "Características guardadas correctamente.", parent=ventana_cuadro_relacion)
 
-                    # Limpiar los campos de selección de síntoma y peso
-                combo_sintoma.set('')  # Limpiar el Combobox del síntoma
-                entry_peso.delete(0, tk.END)  # Limpiar el campo de texto del peso
+                combo_sintoma.set('')  
+                entry_peso.delete(0, tk.END) 
 
             except mysql.connector.Error as e:
                 messagebox.showerror("Error", f"No se pudo guardar: {str(e)}", parent=ventana_cuadro_relacion)
@@ -306,22 +279,18 @@ def abrir_cuadro_relacion(ventana_menu_expe):
             messagebox.showwarning("Advertencia", "Por favor, selecciona una enfermedad.", parent=ventana_cuadro_relacion)
             return
 
-        # Limpiar la tabla
         for i in tabla.get_children():
             tabla.delete(i)
         
-        # Obtener síntomas de la enfermedad seleccionada
         conexion = conectar_db()
         if conexion:
             try:
                 with conexion.cursor() as cursor:
-                    # Primero, obtener el id_enfermedad
                     cursor.execute("SELECT id_enfermedad FROM enfermedades WHERE nombre_objeto = %s", (enfermedad,))
                     id_enfermedad = cursor.fetchone()
                     
                     if id_enfermedad:
                         id_enfermedad = id_enfermedad[0]
-                        # Luego, usar el id_enfermedad para obtener los síntomas y pesos
                         cursor.execute("""
                             SELECT s.sintoma, cr.peso 
                             FROM cuadro_relacion cr
@@ -343,7 +312,6 @@ def abrir_cuadro_relacion(ventana_menu_expe):
       
         
 
-    #Bton Guardar
     boton_guardar = ttk.Button(ventana_cuadro_relacion, text="Guardar",command=guardar_caracteristicas, style='CustomButton.TButton')
     boton_guardar.place(x=360, y=620, width=100, height=30)
 
@@ -353,12 +321,11 @@ def abrir_cuadro_relacion(ventana_menu_expe):
     boton_borrar = ttk.Button(ventana_cuadro_relacion, text="Borrar", command=borrar_relaciones, style='CustomButton.TButton')
     boton_borrar.place(x=580, y=620, width=100, height=30)
 
-    #combo_enfermedad.bind("<<ComboboxSelected>>", lambda event: mostrar_imagen(combo_enfermedad.get(), imagen_label))
 
     combo_enfermedad.bind("<<ComboboxSelected>>", lambda event: ejecutar_metodos(combo_enfermedad.get(), imagen_label))
     def ejecutar_metodos(enfermedad, label):
-        mostrar_imagen(enfermedad, label)  # Llama al método para mostrar la imagen
-        buscar_sintomas()  # Llama al método para buscar los síntomas
+        mostrar_imagen(enfermedad, label)  
+        buscar_sintomas()  
         
 def mostrar_imagen(enfermedad, label):
     if enfermedad:
@@ -380,7 +347,7 @@ def cargar_y_mostrar_imagen(label, ruta):
         imagen_tk = ImageTk.PhotoImage(imagen_redimensionada)
         
         label.config(image=imagen_tk)
-        label.image = imagen_tk  # Mantener una referencia
+        label.image = imagen_tk 
     except Exception as e:
         messagebox.showerror("Error al cargar imagen", str(e))
 

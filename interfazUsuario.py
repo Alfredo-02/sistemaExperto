@@ -58,7 +58,7 @@ def interfaz_usuario(ventana_anterior):
     from busquedaSintoma import abrir_busqueda_sintomas
 
     def busqueda_sintomas():
-        ventana_usuario.withdraw()  # Oculta la ventana actual
+        ventana_usuario.withdraw() 
         abrir_busqueda_sintomas(ventana_usuario)
         
     def busqueda_enfermedad():
